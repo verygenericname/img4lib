@@ -5,14 +5,14 @@
 # Darwin can use CommonCrypto instead of OpenSSL
 #COMMONCRYPTO = 1
 
-CC = gcc
+CC = clang
 CFLAGS = -Wall -W -pedantic
 CFLAGS += -Wno-variadic-macros -Wno-multichar -Wno-four-char-constants -Wno-unused-parameter
 CFLAGS += -O2 -I. -g -DiOS10
 CFLAGS += -DDER_MULTIBYTE_TAGS=1 -DDER_TAG_SIZE=8
 CFLAGS += -D__unused="__attribute__((unused))"
 
-LD = gcc
+LD = clang
 LDFLAGS = -g -Wl,-Bstatic
 LDLIBS = -llzfse
 
