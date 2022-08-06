@@ -30,6 +30,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls
+          git submodule update --init --recursive
           make
           ls
           
