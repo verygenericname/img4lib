@@ -13,7 +13,7 @@ CFLAGS += -DDER_MULTIBYTE_TAGS=1 -DDER_TAG_SIZE=8
 CFLAGS += -D__unused="__attribute__((unused))"
 
 LD = gcc
-LDFLAGS = -g -static
+LDFLAGS = -g -Wl,-Bstatic
 LDLIBS = -llzfse
 
 AR = ar
@@ -124,7 +124,7 @@ CFLAGS += -DUSE_COMMONCRYPTO
 LDLIBS += -framework Security -framework CoreFoundation
 else
 CFLAGS += -Wno-deprecated-declarations
-LDLIBS += -static -lcrypto
+LDLIBS += -Wl,-Bstatic -lcrypto
 endif
 endif
 
