@@ -30,7 +30,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls
-          git submodule init && git submodule update && make -C lzfse
+          git submodule init && git submodule update && make -C lzfse && make
           ls
           
           
