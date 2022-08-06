@@ -124,7 +124,7 @@ CFLAGS += -DUSE_COMMONCRYPTO
 LDLIBS += -framework Security -framework CoreFoundation
 else
 CFLAGS += -Wno-deprecated-declarations
-LDLIBS += -lcrypto -static
+LDLIBS += -static -lcrypto
 endif
 endif
 
